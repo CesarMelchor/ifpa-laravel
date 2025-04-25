@@ -29,6 +29,7 @@ return new class extends Migration
             $table->foreignId('id_artesano')->nullable()->constrained('artesanos','id_artesano');
             $table->foreignId('id_grupo_etnico')->nullable()->constrained('grupos_etnicos');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

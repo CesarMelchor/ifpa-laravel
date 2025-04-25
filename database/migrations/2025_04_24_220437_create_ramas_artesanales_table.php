@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_rama',200);
             $table->string('descripcion',700);
-            $table->tinyInteger('activo',1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

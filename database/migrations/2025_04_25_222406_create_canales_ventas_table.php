@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('canal',150);
             $table->string('descripcion',400);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

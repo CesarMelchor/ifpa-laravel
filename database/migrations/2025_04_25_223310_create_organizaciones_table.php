@@ -26,7 +26,6 @@ return new class extends Migration
             $table->int('num_integrantes')->nullable();
             $table->int('num_hombres')->nullable();
             $table->int('num_mujeres')->nullable();
-            $table->tinyInteger('activo',1);
             $table->text('descripcion')->nullable();
             $table->string('tipo_org',50)->nullable();
             $table->string('tipo',100)->nullable();
@@ -39,6 +38,7 @@ return new class extends Migration
             $table->foreignId('id_tecnica')->nullable()->constrained('tecnicas');
           
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

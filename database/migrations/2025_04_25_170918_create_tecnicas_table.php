@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('nombre_tecnica',200);
             $table->string('descripcion',700);
             $table->string('variedad',500);
-            $table->tinyInteger('activo',1);
             $table->foreignId('id_rama')->nullable()->constrained('ramas_artesanales');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

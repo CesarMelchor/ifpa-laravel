@@ -25,6 +25,7 @@ return new class extends Migration
             $table->foreignId('id_programa_capacitacion')->nullable()->constrained('programas_capacitaciones');
             $table->foreignId('id_trimestre')->nullable()->constrained('trimestres_capacitaciones');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

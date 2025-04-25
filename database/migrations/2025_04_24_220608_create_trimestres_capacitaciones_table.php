@@ -16,8 +16,8 @@ return new class extends Migration
             $table->int('mes_inicio');
             $table->int('mes_termino');
             $table->string('meses');
-            $table->tinyInteger('activo',1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

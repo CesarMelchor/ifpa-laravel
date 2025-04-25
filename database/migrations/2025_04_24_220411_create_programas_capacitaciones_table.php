@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_programa',600);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

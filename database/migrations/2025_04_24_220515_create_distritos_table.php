@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('id_region');
             $table->string('distrito',150);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('localidad',150);
             $table->foreignId('id_municipio')->nullable()->constrained('municipios');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

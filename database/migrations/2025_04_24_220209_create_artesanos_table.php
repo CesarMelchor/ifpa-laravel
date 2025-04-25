@@ -40,8 +40,6 @@ return new class extends Migration
             $table->text('foto')->nullable();
             $table->text('nombre_archivo')->nullable();
             $table->text('comentarios')->nullable();
-            $table->tinyInteger('activo',1);
-
 
             $table->foreignId('id_organizacion')->nullable()->constrained('organizaciones','id_organizacion');
             $table->foreignId('id_region')->nullable()->constrained('regiones');
@@ -57,6 +55,7 @@ return new class extends Migration
             $table->foreignId('id_canal_venta')->nullable()->constrained('canales_ventas');
             $table->foreignId('id_lengua_indigena')->nullable()->constrained('lenguas_indigenas');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
