@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_accion_capacitacion')->nullable()->constrained('acciones_capacitaciones');
             $table->double('monto');
-            $table->foreignId('id_artesano')->nullable()->constrained('artesanos','id_artesano');
+            $table->foreignId('id_artesano')->nullable()->constrained('artesanos');
             $table->timestamps();
             $table->softDeletes();
         });

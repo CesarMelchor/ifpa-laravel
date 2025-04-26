@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('solicitud',15);
             $table->string('observaciones',700)->nullable();
-            $table->tinyInteger('asistencia',1);
-            $table->foreignId('id_artesano')->nullable()->constrained('artesanos','id_artesano');
+            $table->tinyInteger('asistencia');
+            $table->foreignId('id_artesano')->nullable()->constrained('artesanos');
             $table->foreignId('id_accion_capacitacion')->nullable()->constrained('acciones_capacitaciones');
             $table->timestamps();
             $table->softDeletes();

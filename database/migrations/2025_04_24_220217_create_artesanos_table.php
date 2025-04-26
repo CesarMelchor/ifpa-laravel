@@ -41,7 +41,7 @@ return new class extends Migration
             $table->text('nombre_archivo')->nullable();
             $table->text('comentarios')->nullable();
 
-            $table->foreignId('id_organizacion')->nullable()->constrained('organizaciones','id_organizacion');
+            $table->foreignId('id_organizacion')->nullable()->constrained('organizaciones');
             $table->foreignId('id_region')->nullable()->constrained('regiones');
             $table->foreignId('id_distrito')->nullable()->constrained('distritos');
             $table->foreignId('id_municipio')->nullable()->constrained('municipios');

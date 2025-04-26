@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('organizaciones', function (Blueprint $table) {
-            $table->id(); $table->string('id_organizacion')->unique();
+            $table->id(); 
+            $table->string('id_organizacion')->unique();
             $table->string('representante',100);
             $table->string('nombre_organizacion',200);
             $table->string('rfc',12)->nullable();
@@ -23,9 +24,9 @@ return new class extends Migration
             $table->string('tel_fijo',10)->nullable();
             $table->string('tel_celular',10);
             $table->string('correo',50)->nullable();
-            $table->int('num_integrantes')->nullable();
-            $table->int('num_hombres')->nullable();
-            $table->int('num_mujeres')->nullable();
+            $table->integer('num_integrantes')->nullable();
+            $table->integer('num_hombres')->nullable();
+            $table->integer('num_mujeres')->nullable();
             $table->text('descripcion')->nullable();
             $table->string('tipo_org',50)->nullable();
             $table->string('tipo',100)->nullable();

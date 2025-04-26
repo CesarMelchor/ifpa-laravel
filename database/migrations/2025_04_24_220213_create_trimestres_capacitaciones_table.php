@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('trimestres_capacitaciones', function (Blueprint $table) {
             $table->id();
-            $table->int('mes_inicio');
-            $table->int('mes_termino');
+            $table->integer('mes_inicio');
+            $table->integer('mes_termino');
             $table->string('meses');
             $table->timestamps();
             $table->softDeletes();

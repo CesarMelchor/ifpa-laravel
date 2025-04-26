@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('texto_constancia',200);
             $table->string('capacitadores',400);
             $table->string('objetivo',1000);
-            $table->int('duracion');
+            $table->integer('duracion');
             $table->string('nivel',100);
-            $table->int('annio');
+            $table->integer('annio');
             $table->string('cargos',600);
             $table->foreignId('id_programa_capacitacion')->nullable()->constrained('programas_capacitaciones');
             $table->foreignId('id_trimestre')->nullable()->constrained('trimestres_capacitaciones');
